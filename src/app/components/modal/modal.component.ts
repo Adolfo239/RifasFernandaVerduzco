@@ -8,6 +8,7 @@ import { ArrayEstados, ArrayCantidadBoletos } from 'app/shared/Constants'
     selector: 'app-modal-content',
     styleUrls: ['./modal.component.scss'],
     template: `
+    
     <div class="modal-header" >
         <h5 class="modal-title text-center">{{modalButtonName}}</h5>
         <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
