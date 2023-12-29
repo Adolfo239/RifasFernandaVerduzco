@@ -1,0 +1,71 @@
+<div class="wrapper">
+<!-- INFO -->
+<!-- Banner del premio -->
+<div class="w3-container w3-padding-32 w3-center"
+  style="background-color: #ccc; color: #212121; margin: 4em 0em 0em 0em">
+  <h1>Gran Rifa De</h1>
+  <h2>$150,000</h2>
+  <h1>En efectivo</h1>
+  <h5>24 Diciembre 2023</h5>
+</div>
+<!-- Div -->
+<div class="w3-container w3-padding-32 w3-center">
+  <h3 class="w3-center">LISTA DE BOLETOS ABAJO</h3>
+  <div class="w3-col l3 m2 s1 w3-margin-bottom"></div>
+  <div class="w3-col l6 m8 s10 w3-margin-bottom">
+    <img src="	../../../assets/img/dinero.jpg" alt="ComprarImg" style="width:100%">
+  </div>
+  <div class="w3-col l3 m2 s1 w3-margin-bottom"></div>
+</div>
+<!-- Boletos -->
+<div class="w3-container w3-padding-32 w3-center" style="background-color: #ccc; color: #212121; margin-bottom: 1em;">
+  <h3>1 BOLETO POR $1,000 (4 Oportunidades)</h3>
+  <h3>2 BOLETO POR $2,000 (8 Oportunidades)</h3>
+  <h3>5 BOLETO POR $5,000 (20 Oportunidades)</h3>
+</div>
+<!-- participacion -->
+<div class="w3-container w3-padding-32 w3-center">
+  <h3>Con tu boleto liquidado participas por:</h3>
+  <h3>1er Premio mayor de $100,000 pesos</h3>
+  <h3>2do Premio mayor de $30,000 pesos</h3>
+  <h3>2er Premio mayor de $20,000 pesos</h3>
+</div>
+<!-- Haz click abajo -->
+<div class="w3-container w3-padding-32 w3-center" style="background-color: #ccc; color: #212121; margin-bottom: 1em;">
+  <h1>HAZ CLICK ABAJO EN TU</h1>
+  <h2>NÚMERO DE LA SUERTE</h2>
+</div>
+
+
+<div class="search-bar selected-container">
+
+  <div *ngFor="let selected of boletosSelected" class="selected-ticket" id="{{selected}}"
+    (click)="boletoSelected(selected)"><span class="badge rounded-pill bg-danger">{{selected}}</span></div>
+
+</div>
+
+
+
+<!-- buscar -->
+<div class="row search-bar">
+  <input [(ngModel)]="searchValue" (input)="onSearchTextChanged()" type="text" placeholder="Buscar tu boleto" [value]=""
+    style="font-size: 14px; font-weight: normal; color: gray;">
+   
+</div>
+
+<div class="w3-container w3-padding-32 w3-center">
+<app-modal-component [modalButtonName] = "modalButtonName" [boletos] = "boletos"></app-modal-component>
+</div>
+
+<!-- lista de boletos -->
+<div class="ticket-list-container">
+  <div class="display-tickets">
+    <div *ngFor="let boleto of boletos">
+      <div [class]="boleto.boletoClass" id="{{boleto.number}}" (click)="boletoSelected(boleto.number)">
+        {{boleto.number}}
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>

@@ -1,0 +1,36 @@
+.borderMaquinita {
+    border: 2px solid #093c8a;
+    border-radius: 20px;
+    border-color: #f5593d;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.pMaquinita {
+    font-size: 15px;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pMaquinita2 {
+    font-size: 15px;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: no-drop;
+}
+
+.lMaquinita {
+    margin-right: 4px;
+    width: 35px;
+    text-align: center;
+}
+
+.responsiveImg {
+    width: 100%;
+    height: auto;
+  }

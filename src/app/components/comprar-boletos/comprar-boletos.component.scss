@@ -1,0 +1,97 @@
+.w3-container {
+    padding: 0px 0px;
+}
+
+/* Boletos selected tag */
+.selected-container {
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+
+.selected-container, .selected-ticket {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+/* Search bar input */
+.search-bar {
+    gap: 50px;
+    margin: 20px auto 0;
+    max-width: 1100px;
+}
+
+input {
+    height: 50px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Boletos Matrix */
+
+.display-tickets {
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.ticket-list-container {
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: 3px 4px 8px rgba(0,0,0,.2);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.display-tickets {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 30px auto 50px;
+    max-height: 230px;
+    max-width: 1100px;
+    overflow-y: scroll;
+    padding: 7px 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Franklin Gothic Medium,Arial Narrow,Arial,sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+.display-tickets .ticket {
+    background: #00000090;
+    cursor: pointer;
+    font-size: .8rem;
+    font-weight: 800;
+    padding: 4px 9px;
+    text-align: center;
+    width: 80px;
+}
+
+.display-tickets .ticketSelected {
+    background: #19c42790;
+    cursor: pointer;
+    font-size: .8rem;
+    font-weight: 800;
+    padding: 4px 9px;
+    text-align: center;
+    width: 80px;
+}
+
+.badge{
+    font-size: 1.25rem;
+    width: 50px;
+    cursor: pointer;
+}
+
+.modal {
+    --bs-modal-width: 800px;
+    width: 90%;
+    margin-left: 20%;
+}

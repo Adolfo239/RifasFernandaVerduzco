@@ -1,0 +1,152 @@
+<div class="wrapper">
+
+
+
+  <!-- HOME -->
+  <div class="w3-container w3-padding-32 w3-center" id="Inicio">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-64" style="letter-spacing: 5px;">INICIO</h3>
+  </div>
+
+
+  <app-carousel></app-carousel>
+
+  <!-- Preguntas Section -->
+  <div class="w3-container w3-padding-32 w3-center" id="Preguntas">
+
+    <!-- <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Preguntas Frecuentes</h3> -->
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header text-center" id="headingOne" (click)="preguntasOnChange()">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              Preguntas Frecuentes
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" [class]="preguntasClass" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <div>
+              <!-- Pregunta #1 -->
+              <h5>¿CÓMO SE ELIGE A LOS GANADORES?</h5>
+              <p>Todos nuestros sorteos se realizan en base a la Lotería Nacional para la Asistencia Pública mexicana.
+              </p>
+              <p>El ganador de Fernanda Verduzco Rifas será el participante cuyo número de boleto coincida con las
+                últimas
+                cifras del primer premio ganador de la Lotería Nacional (las fechas serán publicadas en nuestra página
+                oficial).
+              </p>
+              <!-- Pregunta #2 -->
+              <h5>¿QUÉ SUCEDE CUANDO EL NÚMERO GANADOR ES UN BOLETO NO VENDIDO?</h5>
+              <p>
+                Se elige un nuevo ganador realizando la misma dinámica en otra fecha cercana (se anunciará la nueva
+                fecha).
+              </p>
+              <p>
+                Esto significa que, ¡Tendrías el doble de oportunidades de ganar con tu mismo boleto!
+              </p>
+              <!-- Pregunta #3 -->
+              <h5>¿DÓNDE SE PUBLICA A LOS GANADORES?</h5>
+              <p>
+                En nuestra página oficial de Facebook Fernanda Verduzco Rifas puedes encontrar todos y cada uno de
+                nuestros
+                sorteos
+                anteriores, así como las transmisiones en vivo con Lotería Nacional y las entregas de premios a los
+                ganadores!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Nosotros -->
+      <div class="card">
+        <div class="card-header text-center" id="headingTwo" (click)="nosotrosOnChange()">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Nosotros
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" [class]="contactoClass" aria-labelledby="headingTwo" data-parent="#accordion"
+          *ngIf="nosotros">
+          <div class="card-body">
+            <!-- Nosotros section -->
+            <div class="w3-container w3-padding-32" id="Nosotros">
+              <!-- <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Nosotros</h3>
+    <h5>SORTEOS ENTRE AMIGOS EN BASE A LA LOTERIA NACIONAL</h5> -->
+              <h5 style="margin-bottom: 50px;">El que no arriesga no gana..</h5>
+              <div class="w3-col l2 m1 w3-margin-bottom"></div>
+              <div class="w3-col l3 m4 w3-margin-bottom">
+                <img src="../../../assets/img/FernandaProfile.jfif" alt="John" style="width:100%">
+                <h3>Fernanda Verduzco</h3>
+                <p class="w3-opacity">Organizadora principal</p>
+                <p>Aqui puede ir un texto de ejemplo, lo que se quiera dejar o se pude quitar</p>
+                <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+              </div>
+              <div class="w3-col l2 m2 w3-margin-bottom"></div>
+              <div class="w3-col l3 m4 w3-margin-bottom">
+                <img src="	https://www.w3schools.com/w3images/team2.jpg" alt="Jane" style="width:100%">
+                <h3>Jorge Verduzco</h3>
+                <p class="w3-opacity">Asistente</p>
+                <p>Aqui puede ir un texto de ejemplo, lo que se quiera dejar o se pude quitar</p>
+                <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+              </div>
+              <div class="w3-col l2 m1 w3-margin-bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Contacto  -->
+
+
+      <div class="card">
+        <div class="card-header text-center" id="headingThree" (click)="contactoOnChange()">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              Contactanos
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" [class]="nosotrosClass" aria-labelledby="headingThree" data-parent="#accordion"
+          *ngIf="contacto">
+          <div class="card-body">
+            <!-- Contact Section -->
+            <div class="w3-container w3-padding-32" id="Contacto">
+              <!-- <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contactanos</h3>
+<h5>No te quedes con las ganas y recuerda "El que no arriesga, no gana"</h5> -->
+              <div class="w3-center">
+                <h2>WHATSAPP: (644) 138 1468 </h2>
+                <div class="w3-col l5 m3 w3-margin-bottom"></div>
+                <div class="w3-col l1 m3 w3-margin-bottom">
+                  <a href="https://api.whatsapp.com/send/?phone=%2B526442125337&text&type=phone_number&app_absent=0"
+                    target="_blank">
+                    <img loading="lazy" src="" sizes="(max-width: 638px) 7vw, (max-width: 998px) 6vw, 4vw"
+                      srcset="https://cdn.builder.io/api/v1/image/assets%2F39b3b29983d44809b33e3a3d15d94e45%2Fc0e90aa4549d4b77ac0496a0eee92200?width=100 100w">
+                  </a>
+                </div>
+                <div class="w3-col l1 m4 w3-margin-bottom">
+                  <a href="https://www.facebook.com/profile.php?id=100076268165515" target="_blank">
+                    <img loading="lazy"
+                      srcset="https://cdn.builder.io/api/v1/image/assets%2F39b3b29983d44809b33e3a3d15d94e45%2Fe4802b02c0fd467699e254dcd2e37a57?width=100 100w"
+                      sizes="(max-width: 638px) 7vw, (max-width: 998px) 6vw, 4vw">
+                  </a>
+                </div>
+                <div class="w3-col l5 m2 w3-margin-bottom"></div>
+                <div class="w3-col l12 m12 w3-margin-bottom containerIFrame">
+                  <iframe loading="eager" class="inicio_fbembedded size"
+                    src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/100076268165515%2F&amp;tabs&amp;width=340&amp;height=130&amp;small_header=false&amp;adapt_container_width=false&amp;hide_cover=false&amp;show_facepile=false&amp;appId=357721409026288"
+                   height="auto" scrolling="no" frameborder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    style="border: none; z-index: 10;"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
