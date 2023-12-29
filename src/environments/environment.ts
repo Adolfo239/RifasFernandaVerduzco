@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  endPoint: "http://www.testrifasfernandaverduzcoapi.somee.com/api/v1/"
+  endPoint: "https://www.testrifasfernandaverduzcoapi.somee.com/api/v1/"
 };
