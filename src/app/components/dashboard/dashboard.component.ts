@@ -26,7 +26,6 @@ export class DashboardComponent implements OnInit {
     } else {
       this.preguntasClass = 'collapse'
     }
-    console.log('valor preguntaS: ' + this.preguntas)
   }
 
   nosotrosOnChange() {

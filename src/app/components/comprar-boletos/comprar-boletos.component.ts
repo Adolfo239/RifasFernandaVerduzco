@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { BoletoService } from 'app/Services/boleto.service';
-import {  BoletoDto } from 'app/interfaces/boleto';
+import {  BoletoDto, BoletoBuyDto } from 'app/interfaces/boleto';
 import { ArrayBoletos } from 'app/shared/Constants';
 import { of } from 'rxjs';
 

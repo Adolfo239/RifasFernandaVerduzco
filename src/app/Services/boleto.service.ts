@@ -3,7 +3,7 @@ import { environment } from 'environments/environment'
 import { Observable } from 'rxjs'
 
 import { Injectable } from '@angular/core';
-import { BoletoDto, BoletoDtoo } from 'app/interfaces/boleto';
+import { BoletoBuyDto, BoletoDto } from 'app/interfaces/boleto';
 
 
 @Injectable({
@@ -37,8 +37,8 @@ export class BoletoService {
         return this.http.get<BoletoDto>(`${this.apiURL}ObtenerLista?sorteoId=` + sorteoId +`&numBoleto=`+numBoleto)
     }
 
-    reserveBoletos(model: BoletoDto): Observable<BoletoDto> {
-        return this.http.post<BoletoDto>(`${this.apiURL}ReservarBoletos`, model)
+    reserveBoletos(model: BoletoBuyDto): Observable<BoletoBuyDto> {
+        return this.http.put<BoletoBuyDto>(`${this.apiURL}ReservarBoletos`, model)
     }
 
     payBoletos(model: BoletoDto): Observable<BoletoDto> {

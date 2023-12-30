@@ -11,14 +11,14 @@ export interface Boleto {
 
 export interface BoletoBuyDto {
     boletoId?: number,
-    number: string[],
-    sorteoId: number, 
-    sorteoDescription: string,
-    competitorName: string,
-    competitorLastName: string,
-    competitorPhoneNumber: string,
-    competitorEmail: string,
-    competitorState: string,
+    lstNumber?: string[],
+    sorteoId?: number, 
+    sorteoDescription?: string,
+    competitorName?: string,
+    competitorLastName?: string,
+    competitorPhoneNumber?: string,
+    competitorEmail?: string,
+    competitorState?: string,
     boletoClass?: string
 }
 
