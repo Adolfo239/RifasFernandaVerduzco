@@ -143,8 +143,26 @@ export class NgbdModalContent {
             console.log('boletos : ', this.boletosSelected);
             this.fetchData();
             this.activeModal.close('Close click');
+            window.location.href = "https://api.whatsapp.com/send/?phone=%2B5216441381468&text=Hola%2C+Aparte+boletos+de+la+rifa%21%21%0ASORTEO+ESPECIAL+N%C2%B0167%21%21%0A%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%0A%2AFolio%3A%2A+SELE562181%0A%0A%EE%84%90+%2A3+BOLETOS%3A%2A%0A00979%2C+04160%2C+05333%2C+%0A%2ANombre%3A%2A+SELENA+CANTU%0A%0A%EE%84%A51+BOLETO+POR+%24180%0A2+BOLETOS+POR+%24360%0A3+BOLETOS+POR+%24540%0A4+BOLETOS+POR+%24720%0A5+BOLETOS+POR+%24900%0A10+BOLETOS+POR+%241%2C800%0A20+BOLETOS+POR+%243%2C600%0A30+BOLETOS+POR+%245%2C400%0A40+BOLETOS+POR+%247%2C200%0A50+BOLETOS+POR+%249%2C000%0A100+BOLETOS+POR+%2418%2C000%0A200+BOLETOS+POR+%2436%2C000%0A%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%0A%EE%88%AF%2ACUENTAS+DE+PAGO+AQU%C3%8D%3A%2A+https://rifasfernandaverduzco.netlify.app/%2Fpagos%0A%0ADec+29+2023+19%3A53%3A22+GMT-0700+%28hora+est%C3%A1ndar+del+Pac%C3%ADfico+de+M%C3%A9xico%29&type=phone_number&app_absent=0"
+            //window.location.href = this.createWhatappURL();
         }
       }
+
+
+      createWhatappURL(): string {
+        var phone = 5216441381468;//5216442125337;
+        var idSorteo = 1;
+        var fullName = (this.reserveBoletos.competitorName + this.reserveBoletos.competitorLastName)
+        var folio = fullName.substring(fullName.length + -4);
+        console.log(folio);
+        var quantity = this.reserveBoletos.lstNumber.length;
+        var numBoletos = this.reserveBoletos.lstNumber.join(', ');
+        var promociones: "";
+        var urlPayment = "https://rifasfernandaverduzco.netlify.app/pagos";
+        var date = new Date();
+        return `https://api.whatsapp.com/send/?phone=%2B${phone}&text=Hola%2C+Aparte+boletos+de+la+rifa%21%21%0ASORTEO+ESPECIAL+N%C2%B0${idSorteo}%21%21%0A%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%0A%2AFolio%3A%2A+${folio}%0A%0A%EE%84%90+%2A${quantity}+BOLETOS%3A%2A%0A${numBoletos}%2C+04160%2C+05333%2C+%0A%2ANombre%3A%2A+${fullName}%0A%0A%EE%84%A5${promociones}%0A%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%0A%EE%88%AF%2ACUENTAS+DE+PAGO+AQU%C3%8D%3A%2A+${urlPayment}%0A%0A${date}+GMT-0700+%28hora+est%C3%A1ndar+del+Pac%C3%ADfico+de+M%C3%A9xico%29&type=phone_number&app_absent=0";
+        `
+         }
 
       continue() {
         this.isComprar = true;
